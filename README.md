@@ -14,6 +14,12 @@ PPD has 3 main functions, and 2 worker threads. Using it is simple:
     
     db = ppd.db()
 
+### kwargs
+PPD includes keywords for database customization.
+
+    path -- directory where the database is to be stored.
+    memsize -- size of memory cache.
+
 ## Push
     db.push(dict)
 
