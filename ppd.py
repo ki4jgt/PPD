@@ -17,8 +17,12 @@ class db:
     def __init__(self, **kwargs):
         
         self.path = ""
+        self.memsize = 1000
+        
         if "path" in kwargs:
             self.path = kwargs["path"]
+        if "memsize" in kwargs:
+            self.memsize = kwargs["memsize"]
 
         self.queue = OrderedDict()
         self.cache = OrderedDict()
@@ -115,5 +119,5 @@ class db:
                     except:
                         self.cache[name] = None
 
-                while len(self.cache) > 1000:
+                while len(self.cache) > self.memsize:
                     self.cache.popitem(last=True)
