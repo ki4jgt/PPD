@@ -8,7 +8,7 @@ It features:
 - A fully-working Memcache to avoid unnecessary read-write operations
 
 # Simple to Use
-PPD has 4 main functions, and 2 worker threads. Using it is simple:
+PPD has 3 main functions, and 2 worker threads. Using it is simple:
 
     import ppd
     
@@ -28,11 +28,6 @@ Pull takes a list of database keys and returns them and their values in a dictio
     db.drop(list)
 
 Drop takes a list of keys and removes them from the database.
-
-## Find
-    db.find(list)
-
-To be implemented later. This function is dedicated to distributed databases. It broadcasts a message to all network nodes, looking for a particular key.
 
 # Worker Threads
 Worker threads prevent data corruption by ensuring PPDF is only accessing one file at a time.
