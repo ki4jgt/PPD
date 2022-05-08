@@ -1,5 +1,5 @@
-# PPDF
-PPDF is a NIDS (Non-Indexed Document Storage) database, written in 127 lines of pure Python.
+# PPD
+PPD is a NIDS (Non-Indexed Document Storage) database, written in 119 lines of pure Python.
 
 It features:
 
@@ -8,11 +8,11 @@ It features:
 - A fully-working Memcache to avoid unnecessary read-write operations
 
 # Simple to Use
-PPDF has 4 main functions, and 2 worker threads. Using it is simple:
+PPD has 4 main functions, and 2 worker threads. Using it is simple:
 
-    import ppdf
+    import ppd
     
-    db = ppdf.db()
+    db = ppd.db()
 
 ## Push
     db.push(dict)
