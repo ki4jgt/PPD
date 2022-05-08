@@ -19,6 +19,8 @@ PPD includes keywords for database customization.
 
     path -- directory where the database is to be stored.
     memsize -- size of memory cache.
+    
+    db = ppd.db(path="./db/", memsize=500)
 
 ## Push
     db.push(dict)
