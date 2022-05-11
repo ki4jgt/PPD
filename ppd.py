@@ -73,7 +73,7 @@ class db:
             sleep(.1)
             while self.queue:
                 data = self.queue.popitem(last=True)
-                for val in data:
+                for val in dict((data,)):
                     p = address(val, path = self.path)
                     Path(p[:-2]).mkdir(parents=True, exist_ok=True)
                     try:
@@ -87,11 +87,8 @@ class db:
                             pass
 
                     with open(p, "w") as fob:
-                        print(dict((data,)))
                         fob.write(dumps(dict((data,))))
-                    if val in self.cache:
-                        del self.cache[val]
-                    self.cache.update((data,))
+                        self.cache.update((data,))
 
     def reader(self):
 
