@@ -53,6 +53,12 @@ class db:
                     r.update({obj:self.cache[obj]})
 
         return r
+    
+    def pullOne(self, s):
+        if not isinstance(s, str):
+            raise TypeError("pullOne must be string: ''")
+            
+        return self.pull([s])[s]
 
     def drop(self, l):
 
