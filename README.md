@@ -30,7 +30,12 @@ Push takes a dictionary of keys, splits them up, and writes each key to its own 
 ## Pull
     db.pull(list)
 
-Pull takes a list of database keys and returns them and their values in a dictionary.
+Pull takes a list of database keys and returns a dictionary of key:value pairs.
+
+## Pull One
+    db.pullOne(string)
+    
+PullOne returns the value of a given key.
 
 ## Drop
     db.drop(list)
