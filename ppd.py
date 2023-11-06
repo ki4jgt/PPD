@@ -19,10 +19,7 @@ class db:
         self.path = ""
         self.memsize = 1000
         
-        if "path" in kwargs:
-            self.path = kwargs["path"]
-        if "memsize" in kwargs:
-            self.memsize = kwargs["memsize"]
+        self.__dict__.update(kwargs)
 
         self.queue = OrderedDict()
         self.cache = OrderedDict()
